@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIVERSÁRIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="playAudio()">
+    <div id="cartao">
+        <img src="https://i.pinimg.com/236x/db/6a/19/db6a19d6379a998d95789da988248a16.jpg" class="aniversario">
+        <div id="text">
+            <h1>Oi Yasmin!!</h1>
+            <p>TENHA UM ÓTIMO ANIVERSÁRIO!! Hoje é um dia especial, e eu não poderia deixar de comemorar, você sempre traz um brilho único para o nosso dia a dia
+                Espero que seu aniversário seja tão incrível quanto você é e que todos os seus desejos se tornem realidade! 
+                Aproveite muito o seu dia e saiba que estou aqui torcendo por você!
+            </p>
+            <p id="fraco">- Miguel -</p>
+
+            <audio id="audio" src="criancas_fnaf.ogg" autoplay></audio>
+            <button id="playButton">★</button>
+        </div>
+        <div id="space"></div>
+    </div>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var audio = document.getElementById('audio');
+            audio.play().catch(function(error) {
+                console.error('Falha ao reproduzir áudio:', error);
+            });
+        });
+    </script>
+</body>
+</html>
